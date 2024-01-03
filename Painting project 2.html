@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Painting</title>
+    <style>
+      body {
+        background: linear-gradient(
+          67.6deg,
+          rgb(225, 242, 254) -2.8%,
+          rgb(193, 224, 250) 44.6%,
+          rgb(19, 116, 197) 102.4%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .container {
+        width: 600px;
+        background-color: aliceblue;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      img {
+        max-width: 100%;
+      }
+      .grid {
+        display: grid;
+        margin: 15px 0;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #aed9f6;
+        background-color: aliceblue;
+        font-size: 18px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: #aed9f6;
+        border-color: aliceblue;
+        cursor: pointer;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        color: aliceblue;
+        font-size: 20px;
+      }
+      .dark-button {
+        font-size: 10px;
+        background-color: #050b1c;
+        color: aliceblue;
+        padding: 5 8px;
+      }
+      .dark-button:hover {
+        color: #050b1c;
+        background-color: aliceblue;
+        cursor: pointer;
+      }
+      .painting-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+        width: 100%;
+        height: 450px;
+      }
+      .painting-intro-picture:hover {
+        transform: scale(1.2);
+        filter: contrast(50%);
+      }
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(20, 30, 48) 11.2%,
+          rgb(36, 59, 85) 91.1%
+        );
+        color: aliceblue;
+      }
+      .dark .container {
+        background: #05102b;
+        color: aliceblue;
+      }
+      .dark a {
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-button">Change Theme</button>
+    <div class="container">
+      <h1>🎨Painting🖌️</h1>
+      <h2>My favorite hobby</h2>
+      <div class="img.gallery">
+        <a href="https://en.wikipedia.org/wiki/Painting" target="_blank"
+          ><img
+            src="https://i.pinimg.com/236x/ed/dd/51/eddd515fa7790191a228fad0955a5300.jpg"
+            class="painting-intro-picture"
+        /></a>
+        <div class="grid">
+          <img
+            src="https://i.pinimg.com/236x/b7/25/c5/b725c5d0758ec2006c399ce635d74e2c.jpg"
+          />
+          <img
+            src="https://i.pinimg.com/236x/0b/01/68/0b0168745b4d4e2b5f429238a2c7245c.jpg"
+          />
+          <img
+            src="https://i.pinimg.com/236x/a1/86/39/a186390378ada757cf717a710e1ba673.jpg"
+          />
+          <img
+            src="https://i.pinimg.com/236x/23/e8/b6/23e8b68fa4b9b9b5f5a47da3987b2fc2.jpg"
+          />
+        </div>
+      </div>
+      <p>
+        Painting is the practice of applying paint, pigment, color or other
+        medium to a solid surface. The medium is commonly applied to the base
+        with a brush, but other implements, such as knives, sponges, and
+        airbrushes, can be used. <br />
+        <a href="https://en.wikipedia.org/wiki/Painting" target="_blank"
+          >📖Read on Wikipedia</a
+        >
+      </p>
+      <button>Learn to paint</button>
+    </div>
+    <footer>Coded by Marta Lucja Weglinska</footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let darkButton = document.querySelector(".dark-button");
+      darkButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
